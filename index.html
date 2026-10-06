@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recenseamento dos Filhos de Pick</title>
+    <title>Recenseamento Geral dos Filhos de Pick - 2026</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Ficha de Recenseamento dos Filhos de Pick na Diáspora</h1>
+    <h1>Recenseamento Geral dos Filhos de Pick - 2026</h1>
 
-    <p>Recenseamento da comunidade de Kabuka Pick residente na diáspora</p>
+    <p>Recenseamento geral da comunidade de Kabuka Pick</p>
 
     <form>
 
@@ -59,6 +59,18 @@
         <input type="radio" id="pai_mae" name="ligacao_familiar" value="Pai e Mãe">
         <label for="pai_mae">Pai e Mãe</label>
 
+      <input type="radio" id="avo_paterno" name="ligacao_familiar" value="Avô paterno">
+      <label for="avo_paterno">Avô paterno</label>
+
+      <input type="radio" id="avo_paterna" name="ligacao_familiar" value="Avó paterna">
+      <label for="avo_paterna">Avó paterna</label>
+
+      <input type="radio" id="avo_materno" name="ligacao_familiar" value="Avô materno">
+      <label for="avo_materno">Avô materno</label>
+
+      <input type="radio" id="avo_materna" name="ligacao_familiar" value="Avó materna">
+      <label for="avo_materna">Avó materna</label>
+
         <br><br>
 
         <label for="nome_pai">Nome do pai:</label>
@@ -71,7 +83,27 @@
 
         <br><br>
 
-        <h2>3. Residência na Diáspora</h2>
+        <label for="nome_avo_paterno">Nome do avô paterno:</label>
+        <input type="text" id="nome_avo_paterno" name="nome_avo_paterno">
+
+        <br><br>
+
+        <label for="nome_avo_paterna">Nome da avó paterna:</label>
+        <input type="text" id="nome_avo_paterna" name="nome_avo_paterna">
+
+        <br><br>
+
+        <label for="nome_avo_materno">Nome do avô materno:</label>
+        <input type="text" id="nome_avo_materno" name="nome_avo_materno">
+
+        <br><br>
+
+        <label for="nome_avo_materna">Nome da avó materna:</label>
+        <input type="text" id="nome_avo_materna" name="nome_avo_materna">
+
+        <br><br>
+
+        <h2>3. Residência Atual</h2>
 
         <label for="pais">País onde reside atualmente:</label>
         <input type="text" id="pais" name="pais">
@@ -90,7 +122,7 @@
 
         <br><br>
 
-        <label>Deseja participar nas iniciativas dos Filhos de Pick na Diáspora?</label>
+        <label>Deseja participar nas iniciativas dos Filhos de Pick?</label>
 
         <input type="radio" id="participa_sim" name="participacao" value="Sim">
         <label for="participa_sim">Sim</label>
@@ -146,6 +178,10 @@
         ligacao_familiar: document.querySelector('input[name="ligacao_familiar"]:checked')?.value || "",
         nome_pai: document.getElementById("nome_pai").value,
         nome_mae: document.getElementById("nome_mae").value,
+        nome_avo_paterno: document.getElementById("nome_avo_paterno").value,
+        nome_avo_paterna: document.getElementById("nome_avo_paterna").value,
+        nome_avo_materno: document.getElementById("nome_avo_materno").value,
+        nome_avo_materna: document.getElementById("nome_avo_materna").value,
         pais: document.getElementById("pais").value,
         cidade: document.getElementById("cidade").value,
         telefone: document.getElementById("telefone").value,
