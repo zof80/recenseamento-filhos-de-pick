@@ -36,20 +36,25 @@
 
         <br><br>
 
+        
         <h2>2. Ligação a Kabuka Pick</h2>
 
-        <label>Relação com Kabuka Pick:</label>
+        <!-- Primeira linha: Avós -->
+        <input type="radio" id="avo_paterno" name="ligacao_familiar" value="Avô paterno">
+        <label for="avo_paterno">Avô paterno</label>
 
-        <input type="radio" id="natural" name="relacao" value="Natural">
-        <label for="natural">Natural de Kabuka Pick</label>
+        <input type="radio" id="avo_paterna" name="ligacao_familiar" value="Avó paterna">
+        <label for="avo_paterna">Avó paterna</label>
 
-        <input type="radio" id="descendente" name="relacao" value="Descendente">
-        <label for="descendente">Descendente de Kabuka Pick</label>
+        <input type="radio" id="avo_materno" name="ligacao_familiar" value="Avô materno">
+        <label for="avo_materno">Avô materno</label>
+
+        <input type="radio" id="avo_materna" name="ligacao_familiar" value="Avó materna">
+        <label for="avo_materna">Avó materna</label>
 
         <br><br>
 
-        <label>Ligação familiar, se descendente:</label>
-
+        <!-- Segunda linha: Pais -->
         <input type="radio" id="pai" name="ligacao_familiar" value="Pai">
         <label for="pai">Pai</label>
 
@@ -59,30 +64,9 @@
         <input type="radio" id="pai_mae" name="ligacao_familiar" value="Pai e Mãe">
         <label for="pai_mae">Pai e Mãe</label>
 
-      <input type="radio" id="avo_paterno" name="ligacao_familiar" value="Avô paterno">
-      <label for="avo_paterno">Avô paterno</label>
-
-      <input type="radio" id="avo_paterna" name="ligacao_familiar" value="Avó paterna">
-      <label for="avo_paterna">Avó paterna</label>
-
-      <input type="radio" id="avo_materno" name="ligacao_familiar" value="Avô materno">
-      <label for="avo_materno">Avô materno</label>
-
-      <input type="radio" id="avo_materna" name="ligacao_familiar" value="Avó materna">
-      <label for="avo_materna">Avó materna</label>
-
         <br><br>
 
-        <label for="nome_pai">Nome do pai:</label>
-        <input type="text" id="nome_pai" name="nome_pai">
-
-        <br><br>
-
-        <label for="nome_mae">Nome da mãe:</label>
-        <input type="text" id="nome_mae" name="nome_mae">
-
-        <br><br>
-
+        <!-- Nomes dos avós -->
         <label for="nome_avo_paterno">Nome do avô paterno:</label>
         <input type="text" id="nome_avo_paterno" name="nome_avo_paterno">
 
@@ -103,6 +87,18 @@
 
         <br><br>
 
+        <!-- Nomes dos pais -->
+        <label for="nome_pai">Nome do pai:</label>
+        <input type="text" id="nome_pai" name="nome_pai">
+
+        <br><br>
+
+        <label for="nome_mae">Nome da mãe:</label>
+        <input type="text" id="nome_mae" name="nome_mae">
+
+        <br><br>
+
+
         <h2>3. Residência Atual</h2>
 
         <label for="pais">País onde reside atualmente:</label>
@@ -115,20 +111,10 @@
 
         <br><br>
 
-        <h2>4. Contacto e Participação</h2>
+        <h2>4. Contacto</h2>
 
         <label for="telefone">Telefone / WhatsApp:</label>
         <input type="tel" id="telefone" name="telefone">
-
-        <br><br>
-
-        <label>Deseja participar nas iniciativas dos Filhos de Pick?</label>
-
-        <input type="radio" id="participa_sim" name="participacao" value="Sim">
-        <label for="participa_sim">Sim</label>
-
-        <input type="radio" id="participa_nao" name="participacao" value="Não">
-        <label for="participa_nao">Não</label>
 
         <br><br>
 
@@ -174,7 +160,6 @@
         numero: document.getElementById("numero").value,
         nome: document.getElementById("nome").value,
         sexo: document.querySelector('input[name="sexo"]:checked')?.value || "",
-        relacao: document.querySelector('input[name="relacao"]:checked')?.value || "",
         ligacao_familiar: document.querySelector('input[name="ligacao_familiar"]:checked')?.value || "",
         nome_pai: document.getElementById("nome_pai").value,
         nome_mae: document.getElementById("nome_mae").value,
@@ -185,7 +170,6 @@
         pais: document.getElementById("pais").value,
         cidade: document.getElementById("cidade").value,
         telefone: document.getElementById("telefone").value,
-        participar: document.querySelector('input[name="participacao"]:checked')?.value || "",
         data_recenseamento: document.getElementById("data_recenseamento").value,
         forma_recenseamento: document.querySelector('input[name="forma_recenseamento"]:checked')?.value || "",
         recenseador: document.getElementById("recenseador").value
